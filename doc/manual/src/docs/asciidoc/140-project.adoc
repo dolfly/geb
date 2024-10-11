@@ -8,9 +8,22 @@ The API reference can be found link:api/index.html[here].
 
 == Support &amp; development
 
-Support for Geb is offered on the link:mailto:geb-user@googlegroups.com[geb-user@googlegroups.com] mailing list, which can be subscribed to link:https://groups.google.com/forum/#!forum/geb-user[here].
 
-Ideas and new features for Geb can be discussed on the link:mailto:geb-dev@googlegroups.com[geb-dev@googlegroups.com] mailing list, which can be subscribed to link:https://groups.google.com/d/forum/geb-dev[here].
+Support for Geb is offered on the following forums:
+
+[cols="1"]
+|===
+| Forum
+| The `geb-users@groovy.apache.org` mailing list: https://lists.apache.org/list.html?geb-users%40groovy.apache.org[Browse] mailto:geb-users-subscribe@groovy.apache.org[Subscribe] mailto:geb-users-unsubscribe@groovy.apache.org[Unsubscribe]
+| The https://github.com/apache/groovy-geb/discussions[Geb GitHub Discussions]
+| The `#geb` channel on the https://groovycommunity.com[Groovy Slack workspace]
+|===
+
+Ideas and new features for Geb can be discussed on
+the `geb-dev@groovy.apache.org` mailing list:
+https://lists.apache.org/list.html?geb-dev%40groovy.apache.org[Browse]
+mailto:geb-dev-subscribe@groovy.apache.org[Subscribe]
+mailto:geb-dev-unsubscribe@groovy.apache.org[Unsubscribe]
 
 == Credits
 

@@ -86,12 +86,12 @@ When a pull request is send it triggers a CI build to verify the test and qualit
 
 ## Proposing new features
 
-If you would like to implement a new feature, please [raise an issue](https://github.com/geb/issues/issues) before sending a pull request so the feature can be discussed.
+If you would like to implement a new feature, please [raise an issue](https://github.com/apache/groovy-geb/issues) before sending a pull request so the feature can be discussed.
 This is to avoid you spending your valuable time working on a feature that the project developers are not willing to accept into the codebase.
 
 ## Fixing bugs
 
-If you would like to fix a bug, please [raise an issue](https://github.com/geb/issues/issues) before sending a pull request so it can be discussed.
+If you would like to fix a bug, please [raise an issue](https://github.com/apache/groovy-geb/issues) before sending a pull request so it can be discussed.
 If the fix is trivial or non-controversial then this is not usually necessary.
 
 ## Development Mailing List
@@ -104,7 +104,7 @@ you can join the `geb-dev@groovy.apache.org` mailing list:
 
 ## Licensing and attribution
 
-Geb is licensed under [ASLv2](http://www.apache.org/licenses/LICENSE-2.0). All source code falls under this license.
+Geb is licensed under [ASLv2](https://www.apache.org/licenses/LICENSE-2.0). All source code falls under this license.
 
 The source code will not contain attribution information (e.g. Javadoc) for contributed code.
 Contributions will be recognised elsewhere in the project documentation.

@@ -1,4 +1,4 @@
-[![Build Status](https://circleci.com/gh/geb/geb/tree/master.svg?style=shield&circle-token=36ce4eb346f11ba916707d493b3f226bd5c9a5ec)](https://circleci.com/gh/geb/workflows/geb/tree/master)
+[![Build Status](https://circleci.com/gh/geb/geb/tree/master.svg?style=shield)](https://circleci.com/gh/geb/workflows/geb/tree/master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.gebish/geb-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.gebish/geb-core)
 [![GitHub contributors](https://img.shields.io/github/contributors/geb/geb.svg)](https://github.com/geb/geb/graphs/contributors/)
 
@@ -14,7 +14,10 @@ Please see [CONTRIBUTING.md](https://github.com/geb/geb/blob/master/CONTRIBUTING
 
 If you'd like to submit an issue against Geb then please use the [Geb GitHub issue tracker](https://github.com/apache/groovy-geb/issues).
 Please avoid submitting usage questions as issues
-and instead join and ask your question on the `geb-users@groovy.apache.org` mailing list:
-[Browse](https://lists.apache.org/list.html?groovy-users@groovy.apache.org)
-[Subscribe](geb-users-subscribe@groovy.apache.org)
-[Unsubscribe](geb-users-unsubscribe@groovy.apache.org)
+and instead join and ask your question on one of the following forums:
+
+| Forum                                                                                                                                                                                                                                 |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| The `geb-users@groovy.apache.org` mailing list: [Browse](https://lists.apache.org/list.html?groovy-users@groovy.apache.org) [Subscribe](geb-users-subscribe@groovy.apache.org) [Unsubscribe](geb-users-unsubscribe@groovy.apache.org) |
+| The [Geb GitHub Discussions](https://github.com/apache/groovy-geb/discussions) forum                                                                                                                                                  |
+| The `#geb` channel on the [Groovy Slack workspace](https://groovycommunity.com)                                                                                                                                                       |
