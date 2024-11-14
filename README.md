@@ -16,8 +16,8 @@ If you'd like to submit an issue against Geb then please use the [Geb GitHub iss
 Please avoid submitting usage questions as issues
 and instead join and ask your question on one of the following forums:
 
-| Forum                                                                                                                                                                                                                                 |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| The `geb-users@groovy.apache.org` mailing list: [Browse](https://lists.apache.org/list.html?groovy-users@groovy.apache.org) [Subscribe](geb-users-subscribe@groovy.apache.org) [Unsubscribe](geb-users-unsubscribe@groovy.apache.org) |
-| The [Geb GitHub Discussions](https://github.com/apache/groovy-geb/discussions) forum                                                                                                                                                  |
-| The `#geb` channel on the [Groovy Slack workspace](https://groovycommunity.com)                                                                                                                                                       |
+| Forum                                                                                                                                                                                                                                            |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| The `geb-users@groovy.apache.org` mailing list: [Browse](https://lists.apache.org/list.html?geb-users@groovy.apache.org) [Subscribe](mailto:geb-users-subscribe@groovy.apache.org) [Unsubscribe](mailto:geb-users-unsubscribe@groovy.apache.org) |
+| The [Geb GitHub Discussions](https://github.com/apache/groovy-geb/discussions) forum                                                                                                                                                             |
+| The `#geb` channel on the [Groovy Slack workspace](https://groovycommunity.com)                                                                                                                                                                  |

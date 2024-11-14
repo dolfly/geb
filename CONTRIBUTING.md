@@ -98,7 +98,7 @@ If the fix is trivial or non-controversial then this is not usually necessary.
 
 If you want to do some work on Geb and want some help,
 you can join the `geb-dev@groovy.apache.org` mailing list:
-[Browse](https://lists.apache.org/list.html?groovy-dev@groovy.apache.org)
+[Browse](https://lists.apache.org/list.html?geb-dev@groovy.apache.org)
 [Subscribe](mailto:geb-dev-subscribe@groovy.apache.org)
 [Unsubscribe](mailto:geb-dev-unsubscribe@groovy.apache.org)
 
