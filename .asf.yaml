@@ -33,9 +33,9 @@ github:
 
 notifications:
   pullrequests_status: geb-dev@groovy.apache.org
-  pullrequests_comment: commits@groovy.apache.org
-  pullrequests_bot_dependabot: commits@groovy.apache.org
-  issues: commits@groovy.apache.org
+  pullrequests_comment: geb-notifications@groovy.apache.org
+  pullrequests_bot_dependabot: geb-notifications@groovy.apache.org
+  issues: geb-notifications@groovy.apache.org
   issues_status: geb-dev@groovy.apache.org
-  issues_comment: commits@groovy.apache.org
+  issues_comment: geb-notifications@groovy.apache.org
   discussions: geb-dev@groovy.apache.org
