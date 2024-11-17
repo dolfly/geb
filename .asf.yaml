@@ -32,6 +32,8 @@ github:
     squash: true
 
 notifications:
+  commits: geb-notifications@groovy.apache.org
+  jobs: geb-notifications@groovy.apache.org
   pullrequests_status: geb-dev@groovy.apache.org
   pullrequests_comment: geb-notifications@groovy.apache.org
   pullrequests_bot_dependabot: geb-notifications@groovy.apache.org
