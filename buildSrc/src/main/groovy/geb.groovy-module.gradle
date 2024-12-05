@@ -48,10 +48,10 @@ tasks.named('rat') {
                 '**/node_modules/**',
                 'out/**', '*.ipr', '**/*.iml', '*.iws', '.idea/**', // Intellij files
                 '**/ratpack/public/robots.txt', // Doesn't support comments
-                '**/ratpack/public/css/*.css', // TODO confirm licensing
-                '**/ratpack/public/js/*.js', // JavaScript files MIT license
-                '**/*.min.js', // JavaScript files MIT license
-                '**/*.min.css', // CSS files MIT license
+                '**/ratpack/public/css/*.css', // site only
+                '**/ratpack/public/js/*.js', // JavaScript files MIT license, site/test only
+                '**/*.min.js', // JavaScript files MIT license, site/test only
+                '**/*.min.css', // CSS files MIT license, site only
                 '**/TransformedClass.template', // TODO: can we remove this?
                 '**/icons.svg', // TODO: licensing info required
                 '.classpath', '.project', '.settings/**', 'bin/**', // Eclipse files
