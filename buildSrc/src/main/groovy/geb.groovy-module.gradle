@@ -59,5 +59,6 @@ tasks.named('rat') {
                 '**/META-INF/services/**', // TODO: can we remove this?
                 '**/META-INF/groovy/**', // TODO: can we remove this?
                 '**/hs_err_pid**.log', // sometimes left over error files
+                '**/pnpm-lock.yaml', //Lock file for pnpm used to build the site
     ]
 }
