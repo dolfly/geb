@@ -38,6 +38,9 @@
     },
     {
       "moduleLicense": "MIT License"
+    },
+    {
+      "moduleLicense": "Bouncy Castle License"
     }
   ]
 }
