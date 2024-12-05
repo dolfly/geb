@@ -26,7 +26,8 @@ import static java.time.temporal.ChronoField.*
 @Slf4j
 class DateTimeLocalInput extends AbstractInput {
 
-    /* codenarc-disable */
+    // codenarc-disable DuplicateNumberLiteral
+    // codenarc-disable DuplicateStringLiteral
     private static final DateTimeFormatter DATE_TIME_FORMAT = new DateTimeFormatterBuilder()
             .append(DateTimeFormatter.ISO_LOCAL_DATE)
             .appendLiteral('T')
@@ -37,7 +38,7 @@ class DateTimeLocalInput extends AbstractInput {
             .appendValue(SECOND_OF_MINUTE, 2)
             .appendFraction(MILLI_OF_SECOND, 0, 3, true)
             .toFormatter()
-    /* codenarc-enable */
+    // codenarc-enable
 
     final String inputType = 'datetime-local'
 
