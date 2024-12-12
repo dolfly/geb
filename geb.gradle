@@ -8,6 +8,11 @@ plugins {
     alias(libs.plugins.nexusPublish)
     alias(libs.plugins.asl2)
     id 'com.github.jk1.dependency-license-report' version '2.9'
+    id 'org.nosphere.apache.rat'
+}
+
+repositories {
+    mavenCentral()
 }
 
 configurations {
@@ -58,4 +63,9 @@ idea {
     project {
         jdkName "11"
     }
+}
+
+tasks.named('rat') {
+    inputDir.set(file('buildSrc'))
+    excludes = ['**/build/**', '**/.gradle/**']
 }
