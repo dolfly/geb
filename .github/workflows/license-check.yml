@@ -34,13 +34,14 @@ jobs:
           check-latest: true
       - uses: gradle/actions/setup-gradle@v4
       - name: Check licenses with rat
-        run: ./gradlew rat
+        run: ./gradlew --no-daemon rat
         timeout-minutes: 60
       - name: Check licenses with license plugin
-        run: ./gradlew checkLicense
+        run: ./gradlew --no-daemon checkLicense
         timeout-minutes: 60
       - name: Upload reports
         uses: actions/upload-artifact@v4
+        if: success() || failure() # always run even if the previous step fails
         with:
           name: build-reports
           path: build/reports/
