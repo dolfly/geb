@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Check licenses
+name: Check style
 
 on: [push, pull_request]
 
@@ -21,7 +21,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  check:
     runs-on: ubuntu-latest
     env:
       DEVELOCITY_ACCESS_KEY: ${{ secrets.GE_ACCESS_TOKEN }}
@@ -33,7 +33,7 @@ jobs:
           java-version: 21
           check-latest: true
       - uses: gradle/actions/setup-gradle@v4
-      - name: Check licenses with Codenarc
+      - name: Check style with Codenarc
         run: ./gradlew codenarcMain
         timeout-minutes: 60
       - name: Upload reports
