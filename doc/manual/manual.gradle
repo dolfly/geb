@@ -54,7 +54,7 @@ dependencies {
     snippets project(path: ":module:geb-core", configuration: "allSources")
 }
 
-def snippetsDirectory = new File(buildDir, "snippets")
+def snippetsDirectory = project.layout.buildDirectory.dir('snippets')
 
 def snippetsTask = tasks.register("snippets", Sync) {
     from configurations.snippets
