@@ -23,7 +23,7 @@ configurations {
 def allSourcesTask = tasks.register("allSources", Sync) {
     from sourceSets.main.allSource.srcDirs
     from sourceSets.test.allSource.srcDirs
-    into rootProject.layout.buildDirectory.dir('allSources')
+    into project.layout.buildDirectory.dir('allSources')
 }
 
 artifacts {
