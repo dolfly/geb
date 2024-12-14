@@ -124,13 +124,13 @@ def groovydocSourcesTask = tasks.register("groovydocSources", Sync) {
     inputs.files configurations.groovydocSources
     from({ configurations.groovydocSources.files.collect { zipTree(it) } })
     exclude 'META-INF/**'
-    into "$buildDir/groovydocSources"
+    into project.layout.buildDirectory.dir('groovydocSources')
 }
 
 def apiDocTask = tasks.register("apiDoc", Groovydoc) {
     groovyClasspath = new GroovyRuntime(project) {}.inferGroovyClasspath(configurations.groovydocClasspath)
     classpath = configurations.groovydocClasspath
-    destinationDir = file("$buildDir/apiDoc")
+    destinationDir = project.layout.buildDirectory.dir('apiDoc').get().asFile
     source groovydocSourcesTask
     access = GroovydocAccess.PROTECTED
     processScripts = true
@@ -139,7 +139,7 @@ def apiDocTask = tasks.register("apiDoc", Groovydoc) {
 }
 
 def packageManualTask = tasks.register("packageManual", Sync) {
-    into "$buildDir/manual"
+    into project.layout.buildDirectory.dir('manual')
     from asciidoctor
 
     into("api") {
