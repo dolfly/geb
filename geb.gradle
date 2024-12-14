@@ -85,6 +85,7 @@ idea {
 
 tasks.named('rat') {
     excludes = [
+        '.asf.yaml', // ASF metadata for github integration excluded from src zip
         '**/build/**',
         '**/.gradle/**', '**/wrapper/**', 'gradlew*',  // gradle wrapper files excluded from src zip
         'licenses/**',

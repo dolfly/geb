@@ -59,24 +59,21 @@ tasks.withType(Test).configureEach {
 
 tasks.named('rat') {
     excludes = [
-                '.asf.yaml', // ASF metadata for github integration excluded from src zip
-                '**/.gradle/**', '**/wrapper/**', 'gradlew*',  // gradle wrapper files excluded from src zip
-                '**/build/**', '**/target/**', 'licenses/**', 'notices/**',
-                '**/generatedResources/**',
-                '**/node_modules/**',
-                'out/**', '*.ipr', '**/*.iml', '*.iws', '.idea/**', // Intellij files
-                '**/ratpack/public/robots.txt', // Doesn't support comments
-                '**/ratpack/public/css/*.css', // site only
-                '**/ratpack/public/js/*.js', // JavaScript files MIT license, site/test only
-                '**/*.min.js', // JavaScript files MIT license, site/test only
-                '**/*.min.css', // CSS files MIT license, site only
-                '**/TransformedClass.template', // TODO: can we remove this?
-                '**/icons.svg', // TODO: licensing info required
-                '.classpath', '.project', '.settings/**', 'bin/**', // Eclipse files
-                '**/MANIFEST.MF', // TODO: can we remove this?
-                '**/META-INF/services/**', // TODO: can we remove this?
-                '**/META-INF/groovy/**', // TODO: can we remove this?
-                '**/hs_err_pid**.log', // sometimes left over error files
-                '**/pnpm-lock.yaml', //Lock file for pnpm used to build the site
+        '**/build/**', '**/.gradle/**',
+        '**/generatedResources/**',
+        '**/node_modules/**',
+        'out/**', '*.ipr', '**/*.iml', '*.iws', '.idea/**', // Intellij files
+        '**/ratpack/public/robots.txt', // Doesn't support comments
+        '**/ratpack/public/css/*.css', // site only
+        '**/ratpack/public/js/*.js', // JavaScript files MIT license, site/test only
+        '**/*.min.js', // JavaScript files MIT license, site/test only
+        '**/*.min.css', // CSS files MIT license, site only
+        '**/TransformedClass.template', // TODO: can we remove this?
+        '**/icons.svg', // TODO: licensing info required
+        '.classpath', '.project', '.settings/**', 'bin/**', // Eclipse files
+        '**/MANIFEST.MF', // TODO: can we remove this?
+        '**/META-INF/services/**', // TODO: can we remove this?
+        '**/META-INF/groovy/**', // TODO: can we remove this?
+        '**/pnpm-lock.yaml', //Lock file for pnpm used to build the site
     ]
 }
