@@ -22,7 +22,7 @@ ratpack = "1.10.0-milestone-32"
 sauceConnect = "1.153"
 selenium = "4.25.0"
 spock = "2.3-groovy-4.0"
-threeTen = "1.7.0"
+threeTen = "1.8.0"
 
 [libraries]
 asciidoctorj = 'org.asciidoctor:asciidoctorj:2.5.13'
