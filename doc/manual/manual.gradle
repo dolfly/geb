@@ -106,6 +106,12 @@ asciidoctorj {
     docExtensions project(":doc:asciidoctor-extension")
 }
 
+asciidoctor {
+    forkOptions {
+        jvmArgs("--add-opens", "java.base/sun.nio.ch=ALL-UNNAMED", "--add-opens", "java.base/java.io=ALL-UNNAMED")
+    }
+}
+
 tasks.named("asciidoctor") {
     sources {
         include 'index.adoc'
