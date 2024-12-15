@@ -24,6 +24,7 @@ plugins {
 dependencies {
     api libs.spock.core
     testImplementation libs.junit.platform.testkit
+    testRuntimeOnly libs.junit.platform.launcher
 }
 
 publishing.publications.main.pom {

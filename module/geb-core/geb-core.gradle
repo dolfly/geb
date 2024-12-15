@@ -30,11 +30,7 @@ plugins {
 }
 
 sourceSets {
-    select {
-        setCompileClasspath(main.compileClasspath)
-        setRuntimeClasspath(main.runtimeClasspath)
-        allSource.source(main.allSource)
-    }
+    select
 }
 
 java {

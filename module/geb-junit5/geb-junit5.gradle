@@ -25,11 +25,11 @@ dependencies {
 
     implementation project(":module:geb-junit")
 
-    testImplementation libs.junit.platform.launcher
     testImplementation libs.junit5.jupiter.params
     testImplementation libs.jsoup
 
     testRuntimeOnly libs.junit5.jupiter.engine
+    testRuntimeOnly libs.junit.platform.launcher
 }
 
 publishing.publications.main.pom {
