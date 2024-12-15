@@ -44,7 +44,7 @@ gebModule {
                 tasks.findByName("checkLicense")?.tap { cl ->
                     it.dependsOn(cl)
                 }
-                into "${rootProject.buildDir}/reports/${projectDirPath}"
+                into rootProject.layout.buildDirectory.dir("reports/${projectDirPath}")
                 from reporting.baseDir
             }
             tasks.withType(Reporting).configureEach { reportingTask ->

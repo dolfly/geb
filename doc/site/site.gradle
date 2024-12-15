@@ -109,7 +109,7 @@ tasks.register("publish", Exec) {
 
 def distributionTask = tasks.register("distribution", Sync) {
     with distributions.main.contents
-    into "${buildDir}/distribution"
+    into project.layout.buildDirectory.dir('distribution')
 }
 
 artifacts {
