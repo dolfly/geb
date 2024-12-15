@@ -53,8 +53,8 @@ nexusPublishing {
     repositories {
         sonatype {
             stagingProfileId = "c1802e5c2fe49"
-            username.set(providers.gradleProperty("sonatypeOssUsername").forUseAtConfigurationTime())
-            password.set(providers.gradleProperty("sonatypeOssPassword").forUseAtConfigurationTime())
+            username.set(providers.gradleProperty("sonatypeOssUsername"))
+            password.set(providers.gradleProperty("sonatypeOssPassword"))
         }
     }
 
