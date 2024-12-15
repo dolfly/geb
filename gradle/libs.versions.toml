@@ -25,7 +25,7 @@ spock = "2.3-groovy-4.0"
 threeTen = "1.7.0"
 
 [libraries]
-asciidoctorj = 'org.asciidoctor:asciidoctorj:2.5.11'
+asciidoctorj = 'org.asciidoctor:asciidoctorj:2.5.13'
 cglib = 'cglib:cglib:2.2'
 codenarcGroovy4 = 'org.codenarc:CodeNarc:3.1.0-groovy-4.0'
 codenarc = 'org.codenarc:CodeNarc:2.2.0'
@@ -62,7 +62,7 @@ testng = 'org.testng:testng:6.14.3'
 threeTen-extra = { module = 'org.threeten:threeten-extra', version.ref = 'threeTen' }
 
 [plugins]
-asciidoc = { id = 'org.asciidoctor.jvm.convert', version = '4.0.2' }
+asciidoc = { id = 'org.asciidoctor.jvm.convert', version = '4.0.3' }
 asl2 = { id = 'com.energizedwork.asl2', version = '1.1' }
 nexusPublish = { id = 'io.github.gradle-nexus.publish-plugin', version = '2.0.0' }
 node = { id = 'com.github.node-gradle.node', version = '3.5.0' }
