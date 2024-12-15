@@ -31,6 +31,7 @@ dependencies {
     implementation gradleApi()
 
     implementation libs.guava
+    testRuntimeOnly libs.junit.platform.launcher
 
     codenarc libs.codenarc, {
         exclude module: "GMetrics"

@@ -31,4 +31,5 @@ dependencies {
 
     implementation libs.testcontainers.selenium
     implementation libs.jetty.server
+    testRuntimeOnly libs.junit.platform.launcher
 }
