@@ -29,9 +29,17 @@ plugins {
     id 'geb.all-sources-configuration'
 }
 
+sourceSets {
+    select {
+        setCompileClasspath(main.compileClasspath)
+        setRuntimeClasspath(main.runtimeClasspath)
+        allSource.source(main.allSource)
+    }
+}
+
 java {
     registerFeature('select') {
-        usingSourceSet(sourceSets.main)
+        usingSourceSet(sourceSets.select)
     }
 }
 
@@ -42,10 +50,11 @@ dependencies {
     api project(":module:geb-waiting")
     api libs.threeTen.extra
 
-    implementation(libs.jodd.core)
-    implementation(libs.jodd.lagarto)
+    implementation libs.jodd.core
+    implementation libs.jodd.lagarto
 
-    selectImplementation(libs.selenium.support)
+    implementation libs.guava
+    implementation libs.selenium.support
 
     testImplementation libs.cglib
     testImplementation libs.jsoup
