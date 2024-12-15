@@ -102,3 +102,12 @@ tasks.named('rat') {
         'out/**', '*.ipr', '**/*.iml', '*.iws', '.idea/**', // Intellij files
     ]
 }
+
+def UNSTABLE = /^([\d.-]+(alpha|beta|rc|m)[\d.-]+)$/
+// ignore non-stable releases
+tasks.named("dependencyUpdates")?.configure {
+    gradleReleaseChannel = 'current'
+    rejectVersionIf {
+        !(it.currentVersion.toLowerCase() ==~ UNSTABLE) && it.candidate.version.toLowerCase() ==~ UNSTABLE
+    }
+}
