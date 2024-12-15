@@ -32,7 +32,7 @@ class FileUploadSpec extends GebSpecWithCallbackServer {
     @TempDir
     File temporaryDir
 
-    def "uploadig a file"() {
+    def "uploading a file"() {
         given:
         def uploadedFile = File.createTempFile("upload", null, temporaryDir) << "from file"
         setupServer()
