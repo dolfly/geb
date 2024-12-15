@@ -55,7 +55,7 @@ class PageContentTemplateBuilder {
 
         while (clazz != stopAt) {
             def templatesDefinition
-            //noinspection GroovyUnusedCatchParameter
+            // noinspection GroovyUnusedCatchParameter
             try {
                 templatesDefinition = clazz[property]
             } catch (MissingPropertyException e) {

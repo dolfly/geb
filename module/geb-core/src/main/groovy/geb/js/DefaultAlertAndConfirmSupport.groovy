@@ -116,7 +116,7 @@ class DefaultAlertAndConfirmSupport implements AlertAndConfirmSupport {
                 }
             """
         } catch (NoSuchWindowException e) {
-            //happens when code executed after the dialog closed the window
+            // happens when code executed after the dialog closed the window
             UNKNOWN
         }
     }
@@ -129,7 +129,7 @@ class DefaultAlertAndConfirmSupport implements AlertAndConfirmSupport {
                 }
             """
         } catch (NoSuchWindowException e) {
-            //ignore, happens when code executed after the dialog closed the window
+            // ignore, happens when code executed after the dialog closed the window
         }
     }
 

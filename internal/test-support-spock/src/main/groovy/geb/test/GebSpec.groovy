@@ -38,7 +38,7 @@ import java.util.function.Supplier
 import static spock.lang.Retry.Mode.SETUP_FEATURE_CLEANUP
 
 @DynamicallyDispatchesToBrowser
-//Work around https://github.com/SeleniumHQ/selenium/issues/9528
+// Work around https://github.com/SeleniumHQ/selenium/issues/9528
 @Retry(
     mode = SETUP_FEATURE_CLEANUP,
     condition = GebSpec.RetryCondition

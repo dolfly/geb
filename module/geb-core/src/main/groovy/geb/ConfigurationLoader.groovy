@@ -204,7 +204,7 @@ class ConfigurationLoader {
         try {
             loaded = loader.loadClass(className)
         } catch (ClassNotFoundException cnfe) {
-            //just return null if the class could not be found
+            // just return null if the class could not be found
         }
         loaded
     }
