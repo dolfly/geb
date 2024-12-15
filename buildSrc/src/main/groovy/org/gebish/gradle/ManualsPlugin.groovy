@@ -64,7 +64,7 @@ class ManualsPlugin implements Plugin<Project> {
         }
 
         project.tasks.register("generateConfigProperties", WriteProperties) {
-            outputFile = project.layout.buildDirectory.file("config-properties/ratpack.properties")
+            destinationFile = project.layout.buildDirectory.file("config-properties/ratpack.properties")
 
             property("manuals.old", manualsExtension.includedManuals.map {
                 (it - currentVersion.get()).reverse().join(",")
