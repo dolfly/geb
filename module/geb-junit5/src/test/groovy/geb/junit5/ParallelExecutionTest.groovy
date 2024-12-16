@@ -122,7 +122,7 @@ abstract class AbstractParallelExecutionWithReportingTest extends ConfigModifyin
         // again using a count down latch
         executionOfTestsCompleteLatch.await()
         CachingDriverFactory.clearCacheCache()
-        assert reportFileTestCounterPrefixes(clazz) == (1..4)*.toString()*.padLeft(3, "0")
+        assert reportFileTestCounterPrefixes(clazz) == '001'..'004'
     }
 
     @BeforeEach
@@ -133,7 +133,7 @@ abstract class AbstractParallelExecutionWithReportingTest extends ConfigModifyin
         assert setupCountDownLatch.await(30, SECONDS)
         baseUrl = "${clazz.callbackServerExtension.server.baseUrl}"
         config.cacheDriverPerThread = true
-        config.rawConfig.reportsDir = "${reportDir.absolutePath.replaceAll('\\\\', '\\\\\\\\')}"
+        config.rawConfig.reportsDir = reportDir.absolutePath.replaceAll($/\\/$, $/\\\\/$)
     }
 
     @AfterEach
