@@ -24,6 +24,7 @@ plugins {
 dependencies {
     testImplementation project(':internal:test-support-spock')
     testImplementation project(':doc:manual-snippets:fixtures')
+    testRuntimeOnly libs.junit.platform.launcher
 }
 
 tasks.named("test") {
