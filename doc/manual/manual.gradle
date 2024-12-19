@@ -77,6 +77,7 @@ asciidoctorj {
         toc                    : 'left',
         encoding               : 'utf-8',
         'snippets-dir'         : snippetsPath,
+        'snippets-res-dir'     : snippetsPath,
         'rb-snippets-dir'      : snippetsPath,
         'cm-snippets-dir'      : snippetsPath,
         'ct-snippets-dir'      : snippetsPath,
