@@ -28,6 +28,7 @@ dependencies {
     testImplementation libs.commons.fileupload
     testImplementation libs.systemLambda
     testImplementation libs.junit.platform.testkit
+    testImplementation libs.junit5-jupiter-api
 }
 
 tasks.named("test") {
