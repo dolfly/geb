@@ -41,16 +41,11 @@ class DriverConfigSpec extends Specification implements InlineConfigurationLoade
     def "configuring driver using closure"() {
         when:
         configScript """
-            import org.openqa.selenium.firefox.FirefoxOptions
             // tag::configuring_driver[]
             import org.openqa.selenium.firefox.FirefoxDriver
 
             driver = { new FirefoxDriver() }
             // end::configuring_driver[]
-            // to make work in headless CI env
-            def firefoxOptions = new FirefoxOptions()
-                .addArguments('headless')
-            driver = { new FirefoxDriver(firefoxOptions) }
         """
 
         then:
