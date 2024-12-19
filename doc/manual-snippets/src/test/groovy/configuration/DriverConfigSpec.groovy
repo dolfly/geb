@@ -21,7 +21,7 @@ package configuration
 import geb.driver.CachingDriverFactory
 import geb.fixture.HeadlessTestSupport
 import geb.test.StandaloneWebDriverServer
-import org.junit.Assume
+import org.junit.jupiter.api.Assumptions
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.htmlunit.HtmlUnitDriver
 import org.openqa.selenium.remote.RemoteWebDriver
@@ -38,7 +38,7 @@ class DriverConfigSpec extends Specification implements InlineConfigurationLoade
 
     def setupSpec() {
         CachingDriverFactory.clearCacheAndQuitDriver()
-        Assume.assumeFalse(HeadlessTestSupport.headless)
+        Assumptions.assumeFalse(HeadlessTestSupport.headless)
     }
 
     def "configuring driver using closure"() {

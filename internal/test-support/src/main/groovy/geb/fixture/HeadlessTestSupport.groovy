@@ -21,7 +21,7 @@ package geb.fixture
 import java.lang.reflect.Constructor
 
 abstract class HeadlessTestSupport {
-    private static boolean headless;
+    private static boolean headless
 
     /**
      * A boolean indicating if we are running in headless mode.
@@ -45,9 +45,9 @@ abstract class HeadlessTestSupport {
 
     static {
         try {
-            final Class jframe = Class.forName("javax.swing.JFrame")
+            final Class jframe = ClassLoader.loadClass('javax.swing.JFrame')
             final Constructor constructor = jframe.getConstructor([String] as Class[])
-            constructor.newInstance(["testing"] as String[])
+            constructor.newInstance(['testing'] as String[])
             headless = false
         } catch (Throwable t) {
             // any exception means headless
