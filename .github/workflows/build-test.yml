@@ -40,3 +40,9 @@ jobs:
       - name: Build and run tests
         run: ./gradlew --no-daemon --no-build-cache test
         timeout-minutes: 60
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-reports
+          path: build/reports/
