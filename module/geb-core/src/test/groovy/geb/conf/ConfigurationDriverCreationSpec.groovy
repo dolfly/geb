@@ -67,7 +67,7 @@ class ConfigurationDriverCreationSpec extends Specification {
     }
 
     def c(m = [:]) {
-        def c = loadClass(ConfigObject).newInstance()
+        def c = loadClass(ConfigObject).getConstructor().newInstance()
         c.putAll(m)
         c
     }
@@ -142,7 +142,7 @@ class ConfigurationDriverCreationSpec extends Specification {
 
     def "specify instance"() {
         when:
-        def driver = loadClass(HtmlUnitDriver).newInstance()
+        def driver = loadClass(HtmlUnitDriver).getConstructor().newInstance()
         d = conf(c(driver: driver)).driver
         then:
         Exception e = thrown()

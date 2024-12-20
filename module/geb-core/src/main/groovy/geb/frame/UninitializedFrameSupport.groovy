@@ -33,37 +33,37 @@ class UninitializedFrameSupport implements FrameSupport {
     }
 
     @Override
-    public <P extends Page, T> T withFrame(frame, @DelegatesTo.Target Class<P> page, @DelegatesTo(strategy = DELEGATE_FIRST, genericTypeIndex = 0) Closure<T> block) {
+    <P extends Page, T> T withFrame(frame, @DelegatesTo.Target Class<P> page, @DelegatesTo(strategy = DELEGATE_FIRST, genericTypeIndex = 0) Closure<T> block) {
         throw initializable.uninitializedException()
     }
 
     @Override
-    public <P extends Page, T> T withFrame(frame, @DelegatesTo.Target P page, @DelegatesTo(strategy = DELEGATE_FIRST) Closure<T> block) {
+    <P extends Page, T> T withFrame(frame, @DelegatesTo.Target P page, @DelegatesTo(strategy = DELEGATE_FIRST) Closure<T> block) {
         throw initializable.uninitializedException()
     }
 
     @Override
-    public <P extends Page, T> T withFrame(Navigator frame, @DelegatesTo.Target Class<P> page, @DelegatesTo(strategy = DELEGATE_FIRST, genericTypeIndex = 0) Closure<T> block) {
+    <P extends Page, T> T withFrame(Navigator frame, @DelegatesTo.Target Class<P> page, @DelegatesTo(strategy = DELEGATE_FIRST, genericTypeIndex = 0) Closure<T> block) {
         throw initializable.uninitializedException()
     }
 
     @Override
-    public <P extends Page, T> T withFrame(Navigator frame, @DelegatesTo.Target P page, @DelegatesTo(strategy = DELEGATE_FIRST) Closure<T> block) {
+    <P extends Page, T> T withFrame(Navigator frame, @DelegatesTo.Target P page, @DelegatesTo(strategy = DELEGATE_FIRST) Closure<T> block) {
         throw initializable.uninitializedException()
     }
 
     @Override
-    public <T> T withFrame(Object frame, Closure<T> block) {
+    <T> T withFrame(Object frame, Closure<T> block) {
         throw initializable.uninitializedException()
     }
 
     @Override
-    public <T> T withFrame(Navigator frame, Closure<T> block) {
+    <T> T withFrame(Navigator frame, Closure<T> block) {
         throw initializable.uninitializedException()
     }
 
     @Override
-    public <T> T withFrame(TemplateDerivedPageContent frame, Closure<T> block) {
+    <T> T withFrame(TemplateDerivedPageContent frame, Closure<T> block) {
         throw initializable.uninitializedException()
     }
 }

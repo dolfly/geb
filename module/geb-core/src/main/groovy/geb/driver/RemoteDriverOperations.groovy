@@ -39,7 +39,7 @@ class RemoteDriverOperations {
      */
     WebDriver getAugmentedDriver(WebDriver driver) {
         asRemoteWebDriver(driver).map { remoteWebDriverClass ->
-            softLoadRemoteDriverClass("Augmenter").newInstance().augment(driver) as WebDriver
+            softLoadRemoteDriverClass("Augmenter").getConstructor().newInstance().augment(driver) as WebDriver
         }.orElse(driver)
     }
 

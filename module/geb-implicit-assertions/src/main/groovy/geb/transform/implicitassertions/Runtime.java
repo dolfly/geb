@@ -24,7 +24,7 @@ import org.codehaus.groovy.runtime.InvokerHelper;
 
 public abstract class Runtime {
 
-    private static ThreadLocal<Object> recordedValue = new ThreadLocal<Object>();
+    private static ThreadLocal<Object> recordedValue = new ThreadLocal<>();
 
     @SuppressWarnings("UnusedDeclaration")
     public static boolean isVoidMethod(Object target, String method, Object... args) {

@@ -975,7 +975,7 @@ interface Navigator extends Iterable<Navigator>, Locator, StringRepresentationPr
      * @param moduleClass a class extending {@link geb.Module}
      * @return an initialized instance of the module class passed as the argument
      */
-    public <T extends Module> T module(Class<T> moduleClass)
+    <T extends Module> T module(Class<T> moduleClass)
 
     /**
      * Initialize a module instance using {@code this} as its base.
@@ -983,7 +983,7 @@ interface Navigator extends Iterable<Navigator>, Locator, StringRepresentationPr
      * @param module an instance of a class extending {@link geb.Module}
      * @return an initialized instance of passed as the argument
      */
-    public <T extends Module> T module(T module)
+    <T extends Module> T module(T module)
 
     /**
      * Create and initialize a list of module instances using navigators created from web elements which make up {@code this} navigator as their bases.
@@ -991,7 +991,7 @@ interface Navigator extends Iterable<Navigator>, Locator, StringRepresentationPr
      * @param moduleClass a class extending {@link geb.Module}
      * @return a list of initialized instances of the module class passed as the argument
      */
-    public <T extends Module> List<T> moduleList(Class<T> moduleClass)
+    <T extends Module> List<T> moduleList(Class<T> moduleClass)
 
     /**
      * Create a list of module instances using the provided factory and initialize them using navigators created from web elements which make up {@code this} navigator as their bases.
@@ -999,7 +999,7 @@ interface Navigator extends Iterable<Navigator>, Locator, StringRepresentationPr
      * @param moduleFactory a closure that should return a new module instance every time it's called
      * @return a list of initialized module instances created using the factory closure passed in as the argument
      */
-    public <T extends Module> List<T> moduleList(Closure<T> moduleFactory)
+    <T extends Module> List<T> moduleList(Closure<T> moduleFactory)
 
     /**
      * Checks if the sole element of {@code this} navigator is focused by comparing it to the element returned from {@link org.openqa.selenium.WebDriver.TargetLocator#activeElement()}.

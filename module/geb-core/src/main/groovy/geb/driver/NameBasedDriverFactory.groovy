@@ -45,7 +45,7 @@ class NameBasedDriverFactory implements DriverFactory {
         }
 
         if (driverClass) {
-            driverClass.newInstance()
+            driverClass.getConstructor().newInstance()
         } else {
             throw new UnableToLoadAnyDriversException(potentials as String[])
         }

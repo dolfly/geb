@@ -193,15 +193,15 @@ class DefaultNavigator implements Navigator {
         new JQueryAdapter(this)
     }
 
-    public <T extends Module> T module(Class<T> moduleClass) {
+    <T extends Module> T module(Class<T> moduleClass) {
         if (!Module.isAssignableFrom(moduleClass)) {
             throw new IllegalArgumentException("$moduleClass is not a subclass of ${Module}")
         }
 
-        module(moduleClass.newInstance())
+        module(moduleClass.getConstructor().newInstance())
     }
 
-    public <T extends Module> T module(T module) {
+    <T extends Module> T module(T module) {
         def baseNavigatorFactory = browser.navigatorFactory.relativeTo(this)
 
         NavigatorFactory moduleBaseNavigatorFactory = ModuleBaseCalculator.calculate(browser, module,
@@ -212,12 +212,12 @@ class DefaultNavigator implements Navigator {
         module
     }
 
-    public <T extends Module> List<T> moduleList(Class<T> moduleClass) {
+    <T extends Module> List<T> moduleList(Class<T> moduleClass) {
         iterator()*.module(moduleClass)
     }
 
     @SuppressWarnings(["UnnecessaryCollectCall"])
-    public <T extends Module> List<T> moduleList(Closure<T> moduleFactory) {
+    <T extends Module> List<T> moduleList(Closure<T> moduleFactory) {
         iterator().collect { it.module(moduleFactory.call()) }
     }
 

@@ -26,7 +26,7 @@ class PotentiallyWaitingExecutor {
         this.wait = wait
     }
 
-    public <T> T execute(Closure<T> block) {
+    <T> T execute(Closure<T> block) {
         if (wait) {
             wait.waitFor(block)
         } else {

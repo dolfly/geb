@@ -48,12 +48,7 @@ public class NormalizeURL {
 
         if (params != null) {
             // Some params are only relevant for user tracking, so remove the most commons ones.
-            for (Iterator<String> i = params.keySet().iterator(); i.hasNext(); ) {
-                final String key = i.next();
-                if (key.startsWith("utm_") || key.contains("session")) {
-                    i.remove();
-                }
-            }
+            params.keySet().removeIf(key -> key.startsWith("utm_") || key.contains("session"));
             queryString = "?" + canonicalize(params);
         } else {
             queryString = "";
@@ -81,10 +76,10 @@ public class NormalizeURL {
         }
 
         final String[] pairs = queryString.split("&");
-        final Map<String, String> params = new HashMap<String, String>(pairs.length);
+        final Map<String, String> params = new HashMap<>(pairs.length);
 
         for (final String pair : pairs) {
-            if (pair.length() < 1) {
+            if (pair.isEmpty()) {
                 continue;
             }
 
@@ -112,7 +107,7 @@ public class NormalizeURL {
             }
         }
 
-        return new TreeMap<String, String>(params);
+        return new TreeMap<>(params);
     }
 
     /**

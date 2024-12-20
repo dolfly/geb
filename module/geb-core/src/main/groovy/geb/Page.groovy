@@ -332,7 +332,7 @@ class Page implements Navigable, PageContentContainer, Initializable, WaitingSup
      * @throws {@link geb.waiting.WaitTimeoutException} if the block does not produce a true-ish value in time
      * @see geb.Configuration#getDefaultWait()
      */
-    public <T> T refreshWaitFor(Map params = [:], Closure<T> block) {
+    <T> T refreshWaitFor(Map params = [:], Closure<T> block) {
         waitingSupport.waitFor(params, withRefresh(block))
     }
 
@@ -347,7 +347,7 @@ class Page implements Navigable, PageContentContainer, Initializable, WaitingSup
      * @throws {@link geb.waiting.WaitTimeoutException} if the block does not produce a true-ish value in time
      * @see geb.Configuration#getWaitPreset(java.lang.String)
      */
-    public <T> T refreshWaitFor(Map params = [:], String waitPreset, Closure<T> block) {
+    <T> T refreshWaitFor(Map params = [:], String waitPreset, Closure<T> block) {
         waitingSupport.waitFor(params, waitPreset, withRefresh(block))
     }
 
@@ -361,7 +361,7 @@ class Page implements Navigable, PageContentContainer, Initializable, WaitingSup
      * @return the true-ish return value from {@code block}
      * @throws {@link geb.waiting.WaitTimeoutException} if the block does not produce a true-ish value in time
      */
-    public <T> T refreshWaitFor(Map params = [:], Number timeout, Closure<T> block) {
+    <T> T refreshWaitFor(Map params = [:], Number timeout, Closure<T> block) {
         waitingSupport.waitFor(params, timeout, withRefresh(block))
     }
 
@@ -376,7 +376,7 @@ class Page implements Navigable, PageContentContainer, Initializable, WaitingSup
      * @return the true-ish return value from {@code block}
      * @throws {@link geb.waiting.WaitTimeoutException} if the block does not produce a true-ish value in time
      */
-    public <T> T refreshWaitFor(Map params = [:], Number timeout, Number interval, Closure<T> block) {
+    <T> T refreshWaitFor(Map params = [:], Number timeout, Number interval, Closure<T> block) {
         waitingSupport.waitFor(params, timeout, interval, withRefresh(block))
     }
 

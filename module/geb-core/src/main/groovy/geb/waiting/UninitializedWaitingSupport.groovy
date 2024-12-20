@@ -28,7 +28,7 @@ class UninitializedWaitingSupport implements WaitingSupport {
     }
 
     @Override
-    def <T> T waitFor(Map params = [:], String waitPreset, Closure<T> block) {
+    <T> T waitFor(Map params = [:], String waitPreset, Closure<T> block) {
         throw initializable.uninitializedException()
     }
 

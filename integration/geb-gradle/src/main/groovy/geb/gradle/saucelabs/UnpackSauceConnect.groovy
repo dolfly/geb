@@ -61,7 +61,7 @@ abstract class UnpackSauceConnect extends DefaultTask {
         deleteOutputFile()
 
         def operations = new SauceConnectOperations(sauceConnect)
-        def manager = operations.loadSauceConnectFourManagerClass().newInstance()
+        def manager = operations.loadSauceConnectFourManagerClass().getConstructor().newInstance()
 
         manager.extractZipFile(temporaryDir, operations.operatingSystem)
 

@@ -545,7 +545,7 @@ The `verifyAt()` method call will either:
 “At checkers” should be kept simple - they should only verify that the expected page is rendered and not deal with any page specific logic.
 
 They should only allow to check that the browser is, for example, at the order summary page and not at the product details or, even worse, the not found page.
-They should not, on the other hand, verify anything related to the logic associated with the page checked, like for example the structure of it or some predicate that should always be fulfiled.
+They should not, on the other hand, verify anything related to the logic associated with the page checked, like for example the structure of it or some predicate that should always be fulfilled.
 Such checks are better suited for a test than an “at checker”.
 That's because “at checkers” are evaluated multiple times, quite often implicitly, like when using `to()` method, effectively meaning that the same thing is verified over and over again.
 

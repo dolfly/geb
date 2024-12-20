@@ -678,7 +678,7 @@ new <<form-element, `FormElement`>> module class.
 
 * Support for dealing with self-signed certificates in Download API using `SelfSignedCertificateHelper`. [issueh:150[]]
 * Connections created when using Download API can be configured globally using `defaultDownloadConfig` configuration option.
-* New `atCheckWaiting` configuration option allowing to implictly wrap “at” checkers in `waitFor` calls. [issueh:253[]]
+* New `atCheckWaiting` configuration option allowing to implicitly wrap “at” checkers in `waitFor` calls. [issueh:253[]]
 
 ==== Fixes
 
@@ -755,7 +755,7 @@ new <<form-element, `FormElement`>> module class.
 ==== Breaking changes
 
 * `click()` now instructs the browser to click *only on the first* element the navigator has matched
-* All `click()` method variants return the reciever
+* All `click()` method variants return the receiver
 * Content definitions with `required: false, wait: true` return `null` and do not throw `WaitTimeoutException` if the timeout expires
 * Assignment statements are not allowed anymore in closure expressions passed to `waitFor()` calls
 * `at()` now throws AssertionException if at checking fails instead of returning false
@@ -776,7 +776,7 @@ new <<form-element, `FormElement`>> module class.
 * New `withWindow()` and `withNewWindow()` methods for working with multiple windows
 * Added `getCurrentWindow()` and `getAvailableWindows()` methods to browser that delegate to the underlying driver instance
 * Content aliasing is now possible using `aliases` parameter in content DSL
-* If config script is not found a config class will be used if there is any - this is usefull if you run test using Geb from IDE
+* If config script is not found a config class will be used if there is any - this is useful if you run test using Geb from IDE
 * Drivers are now cached across the whole JVM, which avoids the browser startup cost in some situations
 * Added config option to disable quitting of cached browsers on JVM shutdown
 

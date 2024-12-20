@@ -261,7 +261,7 @@ class Browser {
      *
      * @return an initialized page instance set as the current page
      */
-    public <T extends Page> T page(Class<T> pageClass) {
+    <T extends Page> T page(Class<T> pageClass) {
         makeCurrentPage(createPage(pageClass))
     }
 

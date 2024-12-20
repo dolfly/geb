@@ -237,7 +237,7 @@ Quite often the asynchronicity is hard to spot if the asynchronous events occur 
 [IMPORTANT]
 ====
 This section introduces a feature which depends on a Chromium specific, custom WebDriver command.
-Calling the methods mentioned in the next paraghraph will only work when driving a Chromium based browser (Chromium, Chrome or Edge) and will throw an exception for other browsers.
+Calling the methods mentioned in the next paragraph will only work when driving a Chromium based browser (Chromium, Chrome or Edge) and will throw an exception for other browsers.
 ====
 
 Thankfully Chrome driver supports controlling network conditions via it's custom `setNetworkConditions` command which allows to control the network conditions of the browser.
@@ -253,8 +253,8 @@ include::{ct-snippets-dir}/geb/BrowserNetworkLatencySpec.groovy[tag=setNetworkLa
 
 [NOTE]
 ====
-There are various types of asynchronous events occuring in a browser and AJAX calls which are network related are only one example.
-Animations would be another example of asynchronicity in web applications and the methods mentioned above will have no influence on timining issues introduced by animations or any other asynchronous events.
+There are various types of asynchronous events occurring in a browser and AJAX calls which are network related are only one example.
+Animations would be another example of asynchronicity in web applications and the methods mentioned above will have no influence on timing issues introduced by animations or any other asynchronous events.
 ====
 
 == Alert and confirm dialogs

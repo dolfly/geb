@@ -36,31 +36,31 @@ class DefaultFrameSupport implements FrameSupport {
         this.browser = browser
     }
 
-    public <P extends Page, T> T withFrame(frame, @DelegatesTo.Target Class<P> page, @DelegatesTo(strategy = DELEGATE_FIRST, genericTypeIndex = 0) Closure<T> block) {
+    <P extends Page, T> T withFrame(frame, @DelegatesTo.Target Class<P> page, @DelegatesTo(strategy = DELEGATE_FIRST, genericTypeIndex = 0) Closure<T> block) {
         withFrame(frame, createPage(page), block)
     }
 
-    public <P extends Page, T> T withFrame(frame, @DelegatesTo.Target P page, @DelegatesTo(strategy = DELEGATE_FIRST) Closure<T> block) {
+    <P extends Page, T> T withFrame(frame, @DelegatesTo.Target P page, @DelegatesTo(strategy = DELEGATE_FIRST) Closure<T> block) {
         executeWithFrame(frame, page, block)
     }
 
-    public <P extends Page, T> T withFrame(Navigator frameNavigator, @DelegatesTo.Target Class<P> page, @DelegatesTo(strategy = DELEGATE_FIRST, genericTypeIndex = 0) Closure<T> block) {
+    <P extends Page, T> T withFrame(Navigator frameNavigator, @DelegatesTo.Target Class<P> page, @DelegatesTo(strategy = DELEGATE_FIRST, genericTypeIndex = 0) Closure<T> block) {
         withFrame(frameNavigator, createPage(page), block)
     }
 
-    public <P extends Page, T> T withFrame(Navigator frameNavigator, @DelegatesTo.Target P page, @DelegatesTo(strategy = DELEGATE_FIRST) Closure<T> block) {
+    <P extends Page, T> T withFrame(Navigator frameNavigator, @DelegatesTo.Target P page, @DelegatesTo(strategy = DELEGATE_FIRST) Closure<T> block) {
         executeWithFrame(frameNavigator, page, block)
     }
 
-    public <T> T withFrame(frame, Closure<T> block) {
+    <T> T withFrame(frame, Closure<T> block) {
         executeWithFrame(frame, null, block)
     }
 
-    public <T> T withFrame(Navigator frameNavigator, Closure<T> block) {
+    <T> T withFrame(Navigator frameNavigator, Closure<T> block) {
         executeWithFrame(frameNavigator, null, block)
     }
 
-    public <T> T withFrame(TemplateDerivedPageContent frame, Closure<T> block) {
+    <T> T withFrame(TemplateDerivedPageContent frame, Closure<T> block) {
         def page = frame.templateParams.page
         page ? withFrame(frame, page, block) : withFrame(frame as Navigator, block)
     }

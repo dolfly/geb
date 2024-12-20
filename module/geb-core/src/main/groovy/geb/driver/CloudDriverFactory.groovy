@@ -50,7 +50,7 @@ abstract class CloudDriverFactory {
         }
         capabilities.putAll(additionalCapabilities)
 
-        def desiredCapabilities = remoteDriverOperations.softLoadRemoteDriverClass('DesiredCapabilities').newInstance()
+        def desiredCapabilities = remoteDriverOperations.softLoadRemoteDriverClass('DesiredCapabilities').getConstructor().newInstance()
         configureCapabilities(username, key, desiredCapabilities)
         capabilities.each { capability, value ->
             desiredCapabilities.setCapability(capability, value)

@@ -180,7 +180,7 @@ class ImplicitAssertionsTransformationSpec extends Specification {
     }
 
     private getTransformedInstanceWithClosureBody(String... code) {
-        getTransformedClassWithClosureBody(code).newInstance()
+        getTransformedClassWithClosureBody(code).getConstructor().newInstance()
     }
 
 }

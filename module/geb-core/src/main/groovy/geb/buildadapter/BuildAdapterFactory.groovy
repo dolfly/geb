@@ -43,7 +43,7 @@ class BuildAdapterFactory {
     static BuildAdapter getBuildAdapter(ClassLoader classLoader) throws ClassNotFoundException {
         def className = System.getProperty(ADAPTER_PROPERTY_NAME)
         if (className) {
-            classLoader.loadClass(className).newInstance()
+            classLoader.loadClass(className).getConstructor().newInstance()
         } else {
             new SystemPropertiesBuildAdapter()
         }

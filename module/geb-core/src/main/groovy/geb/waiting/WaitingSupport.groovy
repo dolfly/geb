@@ -30,9 +30,9 @@ interface WaitingSupport {
      * @throws {@link geb.waiting.WaitTimeoutException} if the block does not produce a true-ish value in time
      * @see geb.Configuration#getWaitPreset(java.lang.String)
      */
-    public <T> T waitFor(String waitPreset, Closure<T> block)
+    <T> T waitFor(String waitPreset, Closure<T> block)
 
-    public <T> T waitFor(Map params, String waitPreset, Closure<T> block)
+    <T> T waitFor(Map params, String waitPreset, Closure<T> block)
 
     /**
      * Uses the {@link geb.Configuration#getDefaultWait() default wait} from the {@code configuration} to
@@ -43,9 +43,9 @@ interface WaitingSupport {
      * @throws {@link geb.waiting.WaitTimeoutException} if the block does not produce a true-ish value in time
      * @see geb.Configuration#getDefaultWait()
      */
-    public <T> T waitFor(Closure<T> block)
+    <T> T waitFor(Closure<T> block)
 
-    public <T> T waitFor(Map params, Closure<T> block)
+    <T> T waitFor(Map params, Closure<T> block)
 
     /**
      * Invokes {@code block} every {@link geb.Configuration#getDefaultWaitRetryInterval()} seconds, until it returns
@@ -56,9 +56,9 @@ interface WaitingSupport {
      * @return the true-ish return value from {@code block}
      * @throws {@link geb.waiting.WaitTimeoutException} if the block does not produce a true-ish value in time
      */
-    public <T> T waitFor(Number timeout, Closure<T> block)
+    <T> T waitFor(Number timeout, Closure<T> block)
 
-    public <T> T waitFor(Map params, Number timeout, Closure<T> block)
+    <T> T waitFor(Map params, Number timeout, Closure<T> block)
 
     /**
      * Invokes {@code block} every {@code interval} seconds, until it returns
@@ -70,8 +70,8 @@ interface WaitingSupport {
      * @return the true-ish return value from {@code block}
      * @throws {@link geb.waiting.WaitTimeoutException} if the block does not produce a true-ish value in time
      */
-    public <T> T waitFor(Number timeout, Number interval, Closure<T> block)
+    <T> T waitFor(Number timeout, Number interval, Closure<T> block)
 
-    public <T> T waitFor(Map params, Number timeout, Number interval, Closure<T> block)
+    <T> T waitFor(Map params, Number timeout, Number interval, Closure<T> block)
 
 }
