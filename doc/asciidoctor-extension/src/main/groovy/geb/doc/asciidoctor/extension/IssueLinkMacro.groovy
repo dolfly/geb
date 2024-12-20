@@ -27,7 +27,7 @@ class IssueLinkMacro extends InlineMacroProcessor {
     Object process(ContentNode parent, String target, Map<String, Object> attributes) {
         def options = [
             type  : ":link",
-            target: "https://github.com/apache/groovy-geb/issues/issues/${target}"
+            target: "https://github.com/apache/groovy-geb/issues/${target}"
         ]
 
         createPhraseNode(parent, "anchor", "#$target", attributes, options)
