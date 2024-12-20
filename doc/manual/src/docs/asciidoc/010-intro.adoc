@@ -159,11 +159,9 @@ Via `@Grab`…
 
 [source,groovy,subs="attributes"]
 ----
-@Grapes([
-    @Grab("{geb-group}:geb-core:{geb-version}"),
-    @Grab("org.seleniumhq.selenium:selenium-firefox-driver:{selenium-version}"),
-    @Grab("org.seleniumhq.selenium:selenium-support:{selenium-version}")
-])
+@Grab("{geb-group}:geb-core:{geb-version}")
+@Grab("org.seleniumhq.selenium:selenium-firefox-driver:{selenium-version}")
+@Grab("org.seleniumhq.selenium:selenium-support:{selenium-version}")
 import geb.Browser
 ----
 
@@ -208,6 +206,9 @@ Be sure to check the chapter on <<build-integrations, build integrations>> for i
 
 === Snapshot repository
 
-If you fancy living on the bleeding edge then you can try out Geb's snapshot artifacts located in link:https://oss.sonatype.org/content/repositories/snapshots/{geb-group-dir}/[the Maven repository at https://oss.sonatype.org/content/repositories/snapshots].
+If you fancy living on the bleeding edge then you can try out Geb's snapshot artifacts located in the link:https://repository.apache.org/content/repositories/snapshots/{geb-group-dir}/[Apache Snapshot repository] at https://repository.apache.org/content/repositories/snapshots.
+
+NOTE: Snapshots are not official Apache releases and
+are intended for the developer community to test upcoming releases.
 
 :numbered:

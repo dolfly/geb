@@ -27,7 +27,7 @@ class BookOfGebExtension implements ExtensionRegistry {
     void register(Asciidoctor asciidoctor) {
         asciidoctor.javaExtensionRegistry()
             .inlineMacro("issue", IssueLinkMacro)
-            .inlineMacro("hissue", HistoricalIssueLinkMacro)
+            .inlineMacro("issueh", HistoricalIssueLinkMacro)
             .inlineMacro("github-profile", GithubProfileLinkMacro)
     }
 
