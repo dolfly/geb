@@ -80,7 +80,7 @@ tasks.register("stage", Sync) {
 
 idea {
     project {
-        jdkName "11"
+        jdkName = "11"
     }
 }
 

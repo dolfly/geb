@@ -174,7 +174,7 @@ artifacts {
 publishing {
     publications {
         manual(MavenPublication) {
-            artifactId 'geb-manual'
+            artifactId = 'geb-manual'
             artifact manualZipTask
             pom {
                 name = "Geb Manual - The Book of Geb"

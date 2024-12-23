@@ -24,7 +24,7 @@ plugins {
 }
 
 signing {
-    required { !gebModule.isSnapshot() }
+    required = { !gebModule.isSnapshot() }
     publishing.publications.configureEach {
         sign(it)
     }
@@ -43,7 +43,7 @@ publishing {
                 }
             }
             scm {
-                url = "https://github.com/geb/geb/"
+                url = "https://github.com/apache/groovy-geb/"
             }
             developers {
                 developer {
@@ -64,7 +64,7 @@ publishing {
 gebModule {
     onCi {
         signing {
-            required { false }
+            required = { false }
         }
 
         tasks.withType(PublishToMavenRepository).configureEach {
