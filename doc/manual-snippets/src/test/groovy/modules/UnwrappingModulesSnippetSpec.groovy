@@ -35,24 +35,24 @@ class UnwrappingModulesSnippetSpec extends DriveMethodSupportingSpecWithServer {
     @SuppressWarnings('UnusedVariable')
     def "assignment of a module to a variable of its declared type fails"() {
         when:
-        //tag::module_variable_fail[]
+        // tag::module_variable_fail[]
         Browser.drive {
             to ModuleUnwrappingPage
             UnwrappedModule foo = theModule   // <1>
         }
-        //end::module_variable_fail[]
+        // end::module_variable_fail[]
         then:
         thrown(GroovyCastException)
     }
 
     def "method invocation with an argument of module's declared type fails"() {
         when:
-        //tag::module_argument_fail[]
+        // tag::module_argument_fail[]
         Browser.drive {
             to ModuleUnwrappingPage
             getContentText(theModule)   // <1>
         }
-        //end::module_argument_fail[]
+        // end::module_argument_fail[]
         then:
         thrown(MissingMethodException)
     }
@@ -60,22 +60,22 @@ class UnwrappingModulesSnippetSpec extends DriveMethodSupportingSpecWithServer {
     @SuppressWarnings('UnusedVariable')
     def "unwrapped module may be used with its declared type"() {
         when:
-        //tag::module_cast[]
+        // tag::module_cast[]
         Browser.drive {
             to ModuleUnwrappingPage
             UnwrappedModule unwrapped = theModule as UnwrappedModule
             getContentText(theModule as UnwrappedModule)
         }
-        //end::module_cast[]
+        // end::module_cast[]
         then:
         noExceptionThrown()
     }
 
-    //tag::module_argument_fail_method[]
+    // tag::module_argument_fail_method[]
     String getContentText(UnwrappedModule module) {
         module.theContent.text()
     }
-    //end::module_argument_fail_method[]
+    // end::module_argument_fail_method[]
 }
 
 // tag::page[]

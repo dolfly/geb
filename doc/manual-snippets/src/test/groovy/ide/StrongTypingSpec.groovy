@@ -149,7 +149,7 @@ class SecurePage extends Page {
 // end::pages[]
 
 class AsyncPage extends Page {
-    //tag::types_with_content[]
+    // tag::types_with_content[]
     static content = {
         async(wait: true) { $("#async") }
     }
@@ -157,5 +157,5 @@ class AsyncPage extends Page {
     String asyncText() {
         async.text() //<1>
     }
-    //end::types_with_content[]
+    // end::types_with_content[]
 }

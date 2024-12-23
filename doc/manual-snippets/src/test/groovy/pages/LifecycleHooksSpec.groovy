@@ -26,24 +26,24 @@ class LifecycleHooksSpec extends DriveMethodSupportingSpecWithServer {
 
     def "on load"() {
         expect:
-        //tag::on_load[]
+        // tag::on_load[]
         Browser.drive {
             to FirstPage
             to SecondPage
             assert page.previousPageName == "FirstPage"
         }
-        //end::on_load[]
+        // end::on_load[]
     }
 
     def "on unload"() {
         expect:
-        //tag::on_unload[]
+        // tag::on_unload[]
         Browser.drive {
             def firstPage = to FirstPage
             to SecondPage
             assert firstPage.newPageName == "SecondPage"
         }
-        //end::on_unload[]
+        // end::on_unload[]
     }
 }
 

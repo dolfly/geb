@@ -127,9 +127,9 @@ title == "Page Title"
 
         when:
         config.rawConfig.waiting.timeout = 0.1
-        //tag::waiting[]
+        // tag::waiting[]
         waitFor { title == "Page Title" }
-        //end::waiting[]
+        // end::waiting[]
 
         then:
         WaitTimeoutException e = thrown()
@@ -138,12 +138,12 @@ title == "Page Title"
 
     def "selectively disabling implicit assertions"() {
         when:
-        //tag::disable_implicit_assertions[]
+        // tag::disable_implicit_assertions[]
         waitFor(implicitAssertions: false) {
             falseReturningMethod()
             true
         }
-        //end::disable_implicit_assertions[]
+        // end::disable_implicit_assertions[]
 
         then:
         noExceptionThrown()

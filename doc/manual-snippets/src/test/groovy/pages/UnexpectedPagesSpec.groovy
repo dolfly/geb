@@ -54,7 +54,7 @@ class UnexpectedPagesSpec extends GebSpecWithCallbackServer {
         // tag::usage[]
         try {
             at ExpectedPage
-            assert false //should not get here
+            assert false // should not get here
         } catch (UnexpectedPageException e) {
             assert e.message.startsWith("An unexpected page ${PageNotFoundPage.name} was encountered")
         }
@@ -83,7 +83,7 @@ class UnexpectedPagesSpec extends GebSpecWithCallbackServer {
         // tag::usage_with_custom_message[]
         try {
             at ExpectedPage
-            assert false //should not get here
+            assert false // should not get here
         } catch (UnexpectedPageException e) {
             assert e.message.contains("Additional UnexpectedPageException message text")
         }

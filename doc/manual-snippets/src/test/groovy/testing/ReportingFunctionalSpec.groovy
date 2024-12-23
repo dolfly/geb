@@ -60,13 +60,13 @@ class ReportingFunctionalSpec extends Specification {
     def "reporting on a failing test which also writes a custom report"() {
         when:
         specRunner.runWithImports """
-            //tag::example[]
+            // tag::example[]
             import geb.spock.GebReportingSpec
             import geb.spock.SpockGebTestManagerBuilder
             import geb.test.GebTestManager
 
             class LoginSpec extends GebReportingSpec {
-            //end::example[]
+            // end::example[]
 
                 private final static GebTestManager TEST_MANAGER = new SpockGebTestManagerBuilder()
                     .withReportingEnabled(true)
@@ -81,19 +81,19 @@ class ReportingFunctionalSpec extends Specification {
                     config.rawConfig.reportsDir = "${reportsDir.absolutePath.replaceAll("\\\\", "\\\\\\\\")}"
                 }
 
-                //tag::example[]
+                // tag::example[]
                 def "login"() {
                     when:
                     go "/login"
                     username = "me"
-                    report "login screen" //<1>
+                    report "login screen" // <1>
                     login().click()
 
                     then:
                     title == "Logged in!"
                 }
             }
-            //end::example[]
+            // end::example[]
         """
 
         then:
