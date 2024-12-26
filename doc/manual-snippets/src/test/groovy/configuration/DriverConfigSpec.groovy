@@ -38,10 +38,12 @@ class DriverConfigSpec extends Specification implements InlineConfigurationLoade
 
     def setupSpec() {
         CachingDriverFactory.clearCacheAndQuitDriver()
-        Assumptions.assumeFalse(HeadlessTestSupport.headless)
     }
 
     def "configuring driver using closure"() {
+        given:
+        Assumptions.assumeFalse(HeadlessTestSupport.headless)
+
         when:
         configScript """
             // tag::configuring_driver[]
@@ -59,6 +61,9 @@ class DriverConfigSpec extends Specification implements InlineConfigurationLoade
     }
 
     def "configuring driver using class name"() {
+        given:
+        Assumptions.assumeFalse(HeadlessTestSupport.headless)
+
         when:
         configScript """
             // tag::configuring_driver_using_class_name[]
@@ -74,6 +79,9 @@ class DriverConfigSpec extends Specification implements InlineConfigurationLoade
     }
 
     def "configuring driver using driver name"() {
+        given:
+        Assumptions.assumeFalse(HeadlessTestSupport.headless)
+
         when:
         configScript """
             // tag::configuring_driver_using_driver_name[]
@@ -92,6 +100,8 @@ class DriverConfigSpec extends Specification implements InlineConfigurationLoade
     def "environment sensitive driver config"() {
         when:
         configScript(env, """
+            !env || Assumptions.assumeFalse(HeadlessTestSupport.headless)
+
             // tag::env_sensitive_driver_config[]
             import org.openqa.selenium.htmlunit.HtmlUnitDriver
 

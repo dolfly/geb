@@ -45,7 +45,7 @@ abstract class HeadlessTestSupport {
 
     static {
         try {
-            final Class jframe = ClassLoader.loadClass('javax.swing.JFrame')
+            final Class jframe = HeadlessTestSupport.classLoader.loadClass('javax.swing.JFrame')
             final Constructor constructor = jframe.getConstructor([String] as Class[])
             constructor.newInstance(['testing'] as String[])
             headless = false
