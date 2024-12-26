@@ -100,7 +100,7 @@ class DriverConfigSpec extends Specification implements InlineConfigurationLoade
     def "environment sensitive driver config"() {
         when:
         configScript(env, """
-            !env || Assumptions.assumeFalse(HeadlessTestSupport.headless)
+            Assumptions.assumeFalse(env && HeadlessTestSupport.headless)
 
             // tag::env_sensitive_driver_config[]
             import org.openqa.selenium.htmlunit.HtmlUnitDriver
