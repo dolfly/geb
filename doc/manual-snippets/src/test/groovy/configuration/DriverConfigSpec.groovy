@@ -100,6 +100,7 @@ class DriverConfigSpec extends Specification implements InlineConfigurationLoade
     def "environment sensitive driver config"() {
         when:
         configScript(env, """
+            import org.junit.jupiter.api.Assumptions
             Assumptions.assumeFalse(env && HeadlessTestSupport.headless)
 
             // tag::env_sensitive_driver_config[]
