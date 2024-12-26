@@ -98,11 +98,11 @@ class DriverConfigSpec extends Specification implements InlineConfigurationLoade
 
     @Unroll("driver should be #driverClass.simpleName when environment is #env")
     def "environment sensitive driver config"() {
+        given:
+        Assumptions.assumeFalse(env && HeadlessTestSupport.headless)
+
         when:
         configScript(env, """
-            import org.junit.jupiter.api.Assumptions
-            Assumptions.assumeFalse(env && HeadlessTestSupport.headless)
-
             // tag::env_sensitive_driver_config[]
             import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
