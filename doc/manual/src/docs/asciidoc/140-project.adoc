@@ -16,7 +16,7 @@ Support for Geb is offered on the following forums:
 | Forum
 | The `geb-users@groovy.apache.org` mailing list: https://lists.apache.org/list.html?geb-users%40groovy.apache.org[Browse] mailto:geb-users-subscribe@groovy.apache.org[Subscribe] mailto:geb-users-unsubscribe@groovy.apache.org[Unsubscribe]
 | The https://github.com/apache/groovy-geb/discussions[Geb GitHub Discussions]
-| The `#geb` channel on the https://groovycommunity.com[Groovy Slack workspace]
+| The `#geb` channel on the https://www.groovycommunity.com[Groovy Slack workspace]
 |===
 
 Ideas and new features for Geb can be discussed on
