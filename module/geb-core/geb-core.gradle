@@ -62,7 +62,7 @@ dependencies {
 }
 
 tasks.named("test") {
-    maxParallelForks gebModule.maxWorkers
+    maxParallelForks = gebModule.maxWorkers
 }
 
 tasks.register("allCrossBrowserTests") {
@@ -72,11 +72,11 @@ tasks.register("allCrossBrowserTests") {
 def firefoxLinuxTestTask = tasks.register("firefoxLinuxTest", Test) {
     maxHeapSize = "512m"
     systemProperty "geb.dockerized.driver", "firefox"
-    maxParallelForks 2
+    maxParallelForks = 2
 }
 
 tasks.named("chromeLinuxTest") {
-    maxParallelForks 2
+    maxParallelForks = 2
 }
 
 tasks.named("allDockerisedCrossBrowserTests") {
@@ -99,7 +99,7 @@ sauceLabs {
     }
     task {
         maxHeapSize = "512m"
-        maxParallelForks 5
+        maxParallelForks = 5
         testLogging {
             events "started", "skipped", "passed", "failed"
         }
@@ -150,7 +150,7 @@ browserStack {
     }
     task {
         maxHeapSize = "512m"
-        maxParallelForks 5
+        maxParallelForks = 5
         testLogging {
             events "started", "skipped", "passed", "failed"
         }
@@ -174,7 +174,7 @@ lambdaTest {
     }
     task {
         maxHeapSize = "512m"
-        maxParallelForks 5
+        maxParallelForks = 5
         testLogging {
             events "started", "skipped", "passed", "failed"
         }
