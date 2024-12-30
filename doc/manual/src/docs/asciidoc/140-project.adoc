@@ -111,15 +111,15 @@ This page lists the more important changes between versions of Geb.
 
 ==== ⚙️ Dependencies
 * Upgrade Groovy to 4.0.24. [issue:227[]]
+* commit:3141b7a8[] Bump node-gradle plugin to 7.1.0 (build dependency)
 * commit:e8b4a36c[] Bump guava to 33.4.0-jre
 * commit:cb70a30a[] Bump JUnit/JUnit Platform to 5.11.4/1.11.4
 * commit:518088aa[] Bump system-lambda to 1.2.1
 * commit:052216b4[] Bump jsoup to 1.18.3
 * commit:315a6387[] Bump jodd-lagarto to 6.0.6
-* commit:360faf9d[] Make dependency updates a little pickier about versions to show
 * commit:ec8d1130[] Bump testng to 7.5.1
 * commit:083c0703[] Bump Selenium to 4.27.0, Selenium TestContainer to 1.20.3
-* commit:b4fa2a12[] Bump CodeNarc version
+* commit:b4fa2a12[] Bump CodeNarc version (build dependency)
 * commit:519b6d10[] Bump ThreeTen-Extra lib to 1.8.0
 
 
