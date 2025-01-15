@@ -653,7 +653,7 @@ new <<form-element, `FormElement`>> module class.
 
 ==== 🔄️ Changes
 
-* Documentation site has been migrated to link:http://ratpack.io[Ratpack]. [issueh:261[]]
+* Documentation site has been migrated to link:https://ratpack.io[Ratpack]. [issueh:261[]]
 * Cross browser tests are now also executed using Safari driver [issueh:276[]]
 * Artifact snapshots are uploaded and gebish.org is updated after every successful build in CI [issueh:295[]]
 * Added a link:https://travis-ci.org/geb/geb[Travis CI build] that runs tests on submitted pull requests [issueh:309[]]
