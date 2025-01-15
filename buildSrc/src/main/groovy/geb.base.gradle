@@ -33,15 +33,15 @@ repositories {
 gebModule {
     onCi {
         plugins.withType(ReportingBasePlugin) {
-            def projectDirPath = project.path.substring(1).replaceAll(":", "/")
-            def copyTask = tasks.register("copyReportsIntoRoot", Copy) {
-                tasks.findByName("validatePlugins")?.tap { vp ->
+            def projectDirPath = project.path.substring(1).replaceAll(':', '/')
+            def copyTask = tasks.register('copyReportsIntoRoot', Copy) {
+                tasks.findByName('validatePlugins')?.tap { vp ->
                     it.dependsOn(vp)
                 }
-                tasks.findByName("rat")?.tap { rat ->
+                tasks.findByName('rat')?.tap { rat ->
                     it.dependsOn(rat)
                 }
-                tasks.findByName("checkLicense")?.tap { cl ->
+                tasks.findByName('checkLicense')?.tap { cl ->
                     it.dependsOn(cl)
                 }
                 into rootProject.layout.buildDirectory.dir("reports/${projectDirPath}")
@@ -55,21 +55,21 @@ gebModule {
         tasks.withType(Test).configureEach {
             testLogging {
                 showStackTraces = true
-                exceptionFormat "full"
+                exceptionFormat = 'full'
             }
         }
     }
 }
 
 tasks.withType(Test).configureEach {
-    maxHeapSize = "768m"
+    maxHeapSize = '768m'
     jvmArgs '-XX:MaxMetaspaceSize=192m'
 
     testLogging {
         exceptionFormat = 'full'
     }
 
-    inputs.property("isWindows", OperatingSystem.current().windows)
+    inputs.property('isWindows', OperatingSystem.current().windows)
 
     def gebReportsDir = reporting.file("geb/$name")
     outputs.dir(gebReportsDir)
@@ -80,7 +80,7 @@ tasks.withType(Test).configureEach {
     afterSuite { desc, result ->
         if (!desc.parent) {
             if (result.testCount == 0) {
-                throw new IllegalStateException("No tests were found")
+                throw new IllegalStateException('No tests were found')
             }
         }
     }
@@ -89,31 +89,31 @@ tasks.withType(Test).configureEach {
 }
 
 tasks.withType(Groovydoc).configureEach {
-    exclude "**/internal/**"
+    exclude '**/internal/**'
 
-    link "http://docs.oracle.com/javase/8/docs/api/",
-        "java.net",
-        "java.util",
-        "java.lang",
-        "java.io"
+    link 'http://docs.oracle.com/javase/8/docs/api/',
+        'java.net',
+        'java.util',
+        'java.lang',
+        'java.io'
 
     link "http://static.javadoc.io/org.seleniumhq.selenium/selenium-api/${libs.versions.selenium.get()}",
-        "org.openqa.selenium"
+        'org.openqa.selenium'
 
     link "http://static.javadoc.io/org.spockframework/spock-core/${libs.versions.spock.get()}",
-        "spock.lang"
+        'spock.lang'
 
     link "http://static.javadoc.io/org.junit.jupiter/junit-jupiter-api/${libs.versions.junit5.get()}",
-        "org.junit.jupiter.api"
+        'org.junit.jupiter.api'
 
     link "http://static.javadoc.io/junit/junit/${libs.versions.junit4.get()}",
-        "org.junit"
+        'org.junit'
 
     link "http://static.javadoc.io/org.threeten/threeten-extra/${libs.versions.threeTen.get()}",
-        "org.threeten.extra"
+        'org.threeten.extra'
 
     link "http://docs.groovy-lang.org/docs/groovy-${libs.versions.groovy.get()}/html/api/",
-        "groovy.lang"
+        'groovy.lang'
 
     def docName = project.name == "manual" ? "Geb" : project.name
     docTitle = "Groovy API Documentation for $docName $version"
