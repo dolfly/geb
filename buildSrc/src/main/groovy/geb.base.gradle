@@ -45,7 +45,7 @@ gebModule {
                     it.dependsOn(cl)
                 }
                 into rootProject.layout.buildDirectory.dir("reports/${projectDirPath}")
-                from reporting.baseDir
+                from reporting.baseDirectory
             }
             tasks.withType(Reporting).configureEach { reportingTask ->
                 reportingTask.finalizedBy copyTask
