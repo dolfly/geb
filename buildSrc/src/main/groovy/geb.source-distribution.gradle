@@ -43,6 +43,18 @@ tasks.register('distSrc', Zip) {
     with srcSpec
 }
 
+tasks.register('createChecksums') {
+    doLast {
+        distSrc.outputs.files.each { file ->
+            ['md5', 'sha1', 'sha256', 'sha512'].each { alg ->
+                ant.checksum file: file, algorithm: alg
+            }
+        }
+    }
+}
+
+distSrc.finalizedBy(createChecksums)
+
 signing {
-    tasks.named('distSrc')
+    sign distSrc
 }
