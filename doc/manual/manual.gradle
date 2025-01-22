@@ -172,6 +172,18 @@ artifacts {
 }
 
 publishing {
+    repositories {
+        maven {
+            name = "Apache"
+            url = gebModule.isSnapshot()
+                ? 'https://repository.apache.org/content/repositories/snapshots'
+                : 'https://repository.apache.org/service/local/staging/deploy/maven2'
+            credentials {
+                username = gebModule.isSnapshot() ? findProperty('asfNexusUsername') : findProperty('apacheUser')
+                password = gebModule.isSnapshot() ? findProperty('asfNexusPassword') : findProperty('apachePassword')
+            }
+        }
+    }
     publications {
         manual(MavenPublication) {
             artifactId = 'geb-manual'
