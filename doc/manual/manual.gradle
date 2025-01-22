@@ -197,7 +197,7 @@ publishing {
 }
 
 tasks.register("publishJarsAndManual") {
-    dependsOn 'publishManualPublicationToSonatypeRepository'
+    dependsOn 'publishManualPublicationToApacheRepository'
 }
 
 tasks.register("openManual") {

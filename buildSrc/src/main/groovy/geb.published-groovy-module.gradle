@@ -54,7 +54,3 @@ publishing {
         }
     }
 }
-
-tasks.register("publishJarsAndManual") {
-    dependsOn 'publishMainPublicationToSonatypeRepository'
-}
