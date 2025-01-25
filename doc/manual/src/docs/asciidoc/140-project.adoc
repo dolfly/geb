@@ -111,7 +111,7 @@ This page lists the more important changes between versions of Geb.
 
 ==== ⚙️ Dependencies
 * Upgrade Groovy to 4.0.25. [issue:255[]]
-* Upgrade Groovy to 4.0.24. [issue:227[]]
+* commit:d64e9ba9[] Bump gradle to 8.12.1 (build dependency)
 * commit:3141b7a8[] Bump node-gradle plugin to 7.1.0 (build dependency)
 * commit:e8b4a36c[] Bump guava to 33.4.0-jre
 * commit:cb70a30a[] Bump JUnit/JUnit Platform to 5.11.4/1.11.4
