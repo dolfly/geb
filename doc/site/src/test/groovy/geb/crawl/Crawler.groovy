@@ -18,12 +18,11 @@
  */
 package geb.crawl
 
+import io.micronaut.http.MediaType
 import org.codehaus.groovy.runtime.StackTraceUtils
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
-import ratpack.http.MediaType
-import ratpack.http.internal.DefaultMediaType
 
 import javax.net.ssl.*
 import java.security.SecureRandom
@@ -140,10 +139,9 @@ abstract class Crawler {
 
     protected visitCrawlable(Link link) {
         Response lastResponse = new Response(link.uri, openUrlConnection(link.uri))
-
         addPageErrors(link, lastResponse)
 
-        if (!link.errors && lastResponse.contentType.html) {
+        if (!link.errors && lastResponse.contentType == MediaType.TEXT_HTML_TYPE) {
             findPageLinks(lastResponse).each { String it ->
                 def newLink = toLink(link.uri, it)
                 if (newLink) {
@@ -155,6 +153,7 @@ abstract class Crawler {
 
     protected visitNonCrawlable(Link link) {
         def connection = openUrlConnection(link.uri)
+        connection.instanceFollowRedirects = true
         def method = shouldUseHeadRequest(link) ? "HEAD" : "GET"
         connection.requestMethod = method
 
@@ -178,6 +177,7 @@ abstract class Crawler {
     @SuppressWarnings("UnnecessarySetter")
     protected HttpURLConnection openUrlConnection(URI uri) {
         HttpURLConnection connection = uri.toURL().openConnection() as HttpURLConnection
+
         connection.instanceFollowRedirects = false
 
         connection.connectTimeout = 10000
@@ -245,11 +245,13 @@ abstract class Crawler {
 
             // Force the request
             statusCode = connection.responseCode
-            contentType = DefaultMediaType.get(connection.getHeaderField("Content-Type"))
-
-            if (connection.requestMethod == "GET" && contentType.html) {
+            String contentTypeHeader = connection.getHeaderField("Content-Type")
+            if (contentTypeHeader != null) {
+                contentType = MediaType.of(contentTypeHeader)
+            }
+            if (connection.requestMethod == "GET" && contentType == MediaType.TEXT_HTML_TYPE) {
                 def stream = statusCode >= 400 ? connection.errorStream : connection.inputStream
-                document = Jsoup.parse(stream, contentType.charset, uri.toString())
+                document = Jsoup.parse(stream, "UTF-8", uri.toString())
             } else {
                 document = null
             }
