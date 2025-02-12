@@ -73,9 +73,11 @@ tasks.generateIndex {
 tasks.register("replaceAnalyticsWithMatomo") {
     group = "website"
     description = "Replace Google Analytics with Matomo in manuals"
+    def rootDir = project.rootDir
+    def projectDir = project.projectDir
     dependsOn("generateResources")
     doLast {
-        File baseDir = file("${project.projectDir}/src/main/resources/public/manual")
+        File baseDir = file("${projectDir}/src/main/resources/public/manual")
         baseDir.eachFileRecurse(groovy.io.FileType.FILES) { file ->
             if (file.name == 'index.html') {
                 String html = file.text
@@ -98,7 +100,7 @@ tasks.register("replaceAnalyticsWithMatomo") {
 
 </script>
 '''
-                String matomo = new File("${project.rootDir}/doc/manual/src/docs/asciidoc/docinfo.html").text
+                String matomo = new File("${rootDir}/doc/manual/src/docs/asciidoc/docinfo.html").text
                 html = html.replace(ga, matomo)
                 List<String> fontAwesomeLinks = [
                     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css',
