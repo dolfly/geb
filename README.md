@@ -13,9 +13,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-[![Build Status](https://circleci.com/gh/geb/geb/tree/master.svg?style=shield)](https://circleci.com/gh/geb/workflows/geb/tree/master)
+[![Build Status](https://circleci.com/gh/apache/groovy-geb/tree/master.svg?style=shield)](https://circleci.com/gh/apache/workflows/groovy-geb/tree/master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.gebish/geb-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.gebish/geb-core)
-[![GitHub contributors](https://img.shields.io/github/contributors/geb/geb.svg)](https://github.com/geb/geb/graphs/contributors/)
+[![GitHub contributors](https://img.shields.io/github/contributors/apache/groovy-geb.svg)](https://github.com/apache/groovy-geb/graphs/contributors/)
 
 Geb (pronounced “jeb”) is a browser automation solution. It brings together the power of WebDriver, the elegance of jQuery content selection, the robustness of Page Object modelling and the expressiveness of the Groovy language.
 
