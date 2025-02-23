@@ -119,6 +119,11 @@ tasks.register("replaceAnalyticsWithMatomo") {
                 html = html.replace('http://markmail.org/thread/bu3g56oxz2uqzq43',
                     'https://web.archive.org/web/20120211213811/http://markmail.org/thread/bu3g56oxz2uqzq43')
                 file.text = html
+            } else if (file.name == 'style.css') {
+                String html = file.text
+                html = html.replace('@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto|Source+Code+Pro:500,700);',
+                    '@import url(ManualFonts.css);')
+                file.text = html
             }
         }
     }
