@@ -122,7 +122,7 @@ tasks.register("replaceAnalyticsWithMatomo") {
             } else if (file.name == 'style.css') {
                 String html = file.text
                 html = html.replace('@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto|Source+Code+Pro:500,700);',
-                    '@import url(ManualFonts.css);')
+                    '@import url(../../../css/ManualFonts.css);')
                 file.text = html
             }
         }
