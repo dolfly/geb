@@ -23,9 +23,9 @@ limitations under the License.
 	* sonatypeOssUsername=«Jira@Sontype username»
 	* sonatypeOssPassword=«Jira@Sontype password»
 
-# Releasing
+# Releasing (PENDING CHANGES for ASF)
 
-1. Ensure that the revision you're about to promote has been successfully built on [CI](https://circleci.com/gh/geb/workflows/geb/tree/master).
+1. Ensure that the revision you're about to promote has been successfully built on [CI](https://circleci.com/gh/apache/workflows/groovy-geb/tree/master).
 1. Update the version to the required one (usually just dropping -SNAPSHOT) in `buildSrc/src/main/groovy/geb.coordinates.gradle` file.
 1. Change `{geb-version}` expression used in `History` section in `140-project.adoc` to a fixed version (the one that you're about to release).
 1. Commit with message "Version «number»" (don't push yet)
