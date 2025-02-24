@@ -268,6 +268,7 @@ workflows:
   version: 2
   build-workflow:
     jobs:
+      - check
       - manual
       - dockerised-cross-browser:
           requires:
