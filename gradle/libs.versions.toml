@@ -28,7 +28,7 @@ micronaut = "3.10.1" # Micronaut 3 is still supports Java 11
 [libraries]
 asciidoctorj = 'org.asciidoctor:asciidoctorj:2.5.13'
 cglib = 'cglib:cglib:2.2'
-codenarcGroovy4 = 'org.codenarc:CodeNarc:3.5.0-groovy-4.0'
+codenarcGroovy4 = 'org.codenarc:CodeNarc:3.6.0-groovy-4.0'
 codenarc = 'org.codenarc:CodeNarc:2.2.0'
 commons-fileupload = 'commons-fileupload:commons-fileupload:1.5'
 gebSpockGroovy25 = 'org.gebish:geb-spock:4.0'
