@@ -35,7 +35,7 @@ sourceSets {
 
 java {
     registerFeature('select') {
-        usingSourceSet(sourceSets.select)
+        usingSourceSet(sourceSets.main)
     }
 }
 
@@ -50,7 +50,7 @@ dependencies {
     implementation libs.jodd.lagarto
 
     implementation libs.guava
-    implementation libs.selenium.support
+    selectImplementation libs.selenium.support
 
     testImplementation libs.cglib
     testImplementation libs.jsoup
