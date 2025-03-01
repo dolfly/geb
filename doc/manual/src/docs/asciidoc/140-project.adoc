@@ -110,7 +110,7 @@ This page lists the more important changes between versions of Geb.
 * Changed the Maven group coordinate to `org.apache.groovy.geb` from `org.gebish`. [issue:226[]]
 
 ==== ⚙️ Dependencies
-* Upgrade Groovy to 4.0.25. [issue:255[]]
+* Upgrade Groovy to 4.0.26. [issue:264[]]
 * commit:d64e9ba9[] Bump gradle to 8.12.1 (build dependency)
 * commit:3141b7a8[] Bump node-gradle plugin to 7.1.0 (build dependency)
 * commit:e8b4a36c[] Bump guava to 33.4.0-jre
