@@ -17,7 +17,7 @@
 # see https://s.apache.org/asfyaml
 github:
   description: "Apache Geb: Very Groovy Browser Automation"
-  homepage: https://gebish.org
+  homepage: https://groovy.apache.org/geb
   features:
     issues: true
     # Enable wiki for documentation
