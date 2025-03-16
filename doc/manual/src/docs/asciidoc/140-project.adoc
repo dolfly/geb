@@ -117,7 +117,7 @@ This page lists the more important changes between versions of Geb.
 * commit:e8b4a36c[] Bump guava to 33.4.0-jre
 * commit:a02db74a[] Bump JUnit/JUnit Platform to 5.12.0/1.12.0
 * commit:518088aa[] Bump system-lambda to 1.2.1
-* commit:052216b4[] Bump jsoup to 1.18.3
+* commit:d4419a94[] Bump jsoup to 1.19.1
 * commit:315a6387[] Bump jodd-lagarto to 6.0.6
 * commit:ec8d1130[] Bump testng to 7.5.1
 * commit:083c0703[] Bump Selenium to 4.27.0, Selenium TestContainer to 1.20.3
