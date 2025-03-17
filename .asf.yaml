@@ -19,6 +19,7 @@ github:
   description: "Apache Geb: Very Groovy Browser Automation"
   homepage: https://groovy.apache.org/geb
   features:
+    discussions: true
     issues: true
     # Enable wiki for documentation
     #wiki: true
