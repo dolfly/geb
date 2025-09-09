@@ -107,6 +107,7 @@ asciidoctorj {
         linkcss                   : true,
         stylesheet                : 'css/style.css',
         imagesdir                 : 'images',
+        reproducible              : true,
         'tabs-sync-option'        : true,
         'tabs-sync-storage-key'   : 'tabs'
     ]
