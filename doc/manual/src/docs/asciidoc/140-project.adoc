@@ -104,6 +104,12 @@ mailto:geb-dev-unsubscribe@groovy.apache.org[Unsubscribe]
 
 This page lists the more important changes between versions of Geb.
 
+=== 8.0.1
+
+==== 🐛 Fixes
+
+* Replace removed Selenium HTML5 APIs for compatibility with Webdriver 4.35.0 or later [issue:280[]]
+
 === 8.0.0
 
 8.0.0 marks Geb's first release as a subproject of Apache Groovy.
