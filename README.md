@@ -23,7 +23,7 @@ For more information about the project, see the [https://groovy.apache.org/geb/]
 
 ## How to contribute
 
-Please see [CONTRIBUTING.md](https://github.com/geb/geb/blob/master/CONTRIBUTING.md) for contribution guidelines. 
+Please see [CONTRIBUTING.md](https://github.com/apache/groovy-geb/blob/master/CONTRIBUTING.md) for contribution guidelines. 
 
 ## Submitting issues
 
