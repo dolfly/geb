@@ -104,6 +104,8 @@ mailto:geb-dev-unsubscribe@groovy.apache.org[Unsubscribe]
 
 This page lists the more important changes between versions of Geb.
 
+=== {geb-version}
+
 === 8.0.1
 
 ==== 🐛 Fixes
