@@ -51,10 +51,10 @@ github:
 notifications:
   commits: geb-notifications@groovy.apache.org
   jobs: geb-notifications@groovy.apache.org
-  pullrequests_status: geb-dev@groovy.apache.org
+  pullrequests_status: geb-notifications@groovy.apache.org
   pullrequests_comment: geb-notifications@groovy.apache.org
   pullrequests_bot_dependabot: geb-notifications@groovy.apache.org
   issues: geb-notifications@groovy.apache.org
-  issues_status: geb-dev@groovy.apache.org
+  issues_status: geb-notifications@groovy.apache.org
   issues_comment: geb-notifications@groovy.apache.org
-  discussions: geb-dev@groovy.apache.org
+  discussions: geb-notifications@groovy.apache.org
