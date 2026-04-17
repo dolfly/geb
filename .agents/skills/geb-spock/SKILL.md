@@ -1,5 +1,5 @@
 ---
-name: geb-testing
+name: geb-spock
 description: >
   Write Geb browser automation tests using the Spock framework with best practices.
   Use this skill whenever the user asks to write, generate, fix, or review Geb test specs,
