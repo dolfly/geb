@@ -48,15 +48,15 @@ github:
     rebase: true
     squash: true
 
-rulesets:
-  - name: "Default branch protection"
-    type: branch
-    branches:
-      includes:
-        - "~DEFAULT_BRANCH"
-        - "GEB_*_X"
-    restrict_deletion: true
-    restrict_force_push: true
+  rulesets:
+    - name: "Default branch protection"
+      type: branch
+      branches:
+        includes:
+          - "~DEFAULT_BRANCH"
+          - "GEB_*_X"
+      restrict_deletion: true
+      restrict_force_push: true
 
 notifications:
   commits: geb-notifications@groovy.apache.org
